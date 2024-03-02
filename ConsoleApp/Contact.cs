@@ -1,6 +1,7 @@
 ﻿// AddressBookApp/Contact.cs
 using System;
 
+//Contact structure
 namespace AddressBookApp
 {
     public class Contact

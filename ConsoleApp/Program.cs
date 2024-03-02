@@ -4,7 +4,7 @@ using System;
 
 var addressBook = new AddressBook();
 
-
+//Main menu
 while (true)
 {
     Console.WriteLine("######## Välkommen till din adressbok! ########");
@@ -47,6 +47,7 @@ while (true)
     }
 }
 
+//What the options do
 void ShowAllContacts(AddressBook addressBook)
 {
     if (addressBook.NumberOfContacts == 0)

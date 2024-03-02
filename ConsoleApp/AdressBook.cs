@@ -16,6 +16,7 @@ namespace AddressBookApp
             LoadContacts();
         }
 
+        //Number of contacts
         public int NumberOfContacts => contacts.Count;
 
         public void AddContact(Contact contact)
@@ -24,12 +25,14 @@ namespace AddressBookApp
             SaveContacts();
         }
 
+        //Remove contact
         public void RemoveContactByEmail(string email)
         {
             contacts.RemoveAll(c => c.Email == email);
             SaveContacts();
         }
 
+        //Contacts
         public void ListAllContacts()
         {
             foreach (var contact in contacts)
@@ -38,6 +41,7 @@ namespace AddressBookApp
             }
         }
 
+        //Contact details and if there is no contact
         public void ShowContactDetails(string email)
         {
             var contact = contacts.Find(c => c.Email == email);
@@ -56,6 +60,7 @@ namespace AddressBookApp
             }
         }
 
+        //Get contacts from json file
         private void LoadContacts()
         {
             if (File.Exists("contacts.json"))
@@ -65,6 +70,7 @@ namespace AddressBookApp
             }
         }
 
+        //Saves contacts to json file
         private void SaveContacts()
         {
             var json = JsonSerializer.Serialize(contacts);
